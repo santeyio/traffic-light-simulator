@@ -6,7 +6,7 @@ setup(
     packages = find_packages(), 
     include_package_data = True,
     package_data = {'traffic_light_simulator': ['*']},
-    version = '0.1',
+    version = '0.1.1',
     description = 'A Traffic Light Simulator',
     author = 'Caleb Hayashida',
     author_email = 'santeyio@gmail.com',
