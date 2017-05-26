@@ -1,6 +1,7 @@
 import unittest
 from models import TrafficLight
 
+
 class TrafficLightTestCase(unittest.TestCase):
     
     def test_if_green_light_art_set(self):
@@ -56,8 +57,6 @@ class TrafficLightTestCase(unittest.TestCase):
         light = TrafficLight(initial_color='green', green_time=3)
         current_color_time = light.get_current_color_time()
         self.assertEqual(current_color_time, 3)
-        
-        
 
 
 if __name__ == '__main__':

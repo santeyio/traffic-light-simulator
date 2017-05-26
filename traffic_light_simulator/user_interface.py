@@ -18,10 +18,10 @@ def main():
     while True:
 
         try:
-            print "Remember, if you want to quit just type 'exit'"
-            print "To run infinite cycles you can enter 'forever'"
-            print "If you want to stop the cycles please use ctrl+c"
-            print "--------------------------------"
+            print ("Remember, if you want to quit just type 'exit'\n"
+                   "To run infinite cycles you can enter 'forever'\n"
+                   "If you want to stop the cycles please use ctrl+c\n"
+                   "--------------------------------")
             cycles = handle_input("How many cycles of lights would you like to run? ",
                                   outputtype='int')
             green = handle_input("How many seconds should a green light last? ")

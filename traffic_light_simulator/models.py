@@ -2,6 +2,7 @@ import os
 
 PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 
+
 class TrafficLight():
     """ Traffic Light object to load artwork and keep track of state """
 

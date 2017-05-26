@@ -1,6 +1,7 @@
 import sys
 import time
 
+
 def cycle(tlight):
     """
     displays the current_color_art for a TrafficLight object
@@ -15,7 +16,6 @@ def cycle(tlight):
         if seconds >= 1:
             time.sleep(1)
         elif seconds >= 0:
-            # pdb.set_trace()
             time.sleep(seconds)
         seconds -= 1
     tlight.switch_light()
@@ -30,13 +30,11 @@ def run_cycles(tlight, cycles):
     if cycles == 'forever':
         while True:
             cycle(tlight)
-        return
     else:
         cycles *= 3
         while cycles > 0:
             cycle(tlight)
             cycles -= 1
-        return
 
 
 def handle_input(prompt, outputtype='float'):
@@ -54,7 +52,11 @@ def handle_input(prompt, outputtype='float'):
         elif outputtype == 'int' and user_input == 'forever':
             return 'forever'
         try:
-            return float(user_input)
+            output = float(user_input)
+            if output > 0:
+                return output
+            else:
+                raise ValueError('Negative numbers are not allowed')
         except ValueError:
             print "Whoops! That's not right! Please try again."
             user_input = raw_input(prompt)
